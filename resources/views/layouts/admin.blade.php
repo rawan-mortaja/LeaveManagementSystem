@@ -7,6 +7,8 @@
     <title>@yield('title', 'Leave Management')</title>
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.4.1/dist/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/admin-lte@3.1/dist/css/adminlte.min.css">
+    <link rel="stylesheet" href="{{ asset('path/to/adminlte.css') }}">
+    <link rel="stylesheet" href="{{ asset('path/to/custom.css') }}">
 
     {{-- <link rel="stylesheet" href="{{ asset('css/bootstrap.min.css') }}">
     <link rel="stylesheet" href="{{ asset('css/font-awesome.min.css') }}"> --}}
@@ -49,6 +51,8 @@
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.4.1/dist/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
 <script src="https://cdn.jsdelivr.net/npm/admin-lte@3.1/dist/js/adminlte.min.js"></script>
 
+<script src="{{ asset('path/to/adminlte.js') }}"></script>
+<script src="{{ asset('path/to/custom.js') }}"></script>
 {{-- <script src="{{ asset('js/app.js') }}"></script> --}}
 </body>
 

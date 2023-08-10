@@ -26,3 +26,8 @@
     border: none;
     cursor: pointer;
 }
+
+.brand-link:hover {
+    color: #474747;
+    text-decoration: none;
+}

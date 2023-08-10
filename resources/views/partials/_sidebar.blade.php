@@ -1,9 +1,7 @@
-<!-- resources/views/partials/_sidebar.blade.php -->
-
-<aside class="main-sidebar sidebar-dark-primary elevation-4">
+<aside class="main-sidebar bg-indigo-500 elevation-4 ">
     <!-- Brand Logo -->
-    <a href="{{ route('home') }}" class="brand-link">
-        <span class="brand-text font-weight-light">Leave Management</span>
+    <a href="{{ route('home') }}" class="brand-link icon-open">
+        <span class="brand-text font-weight-bold ml-3">Leave Management</span>
     </a>
 
     <!-- Sidebar -->
