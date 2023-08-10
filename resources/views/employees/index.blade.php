@@ -7,7 +7,7 @@
     <section class="content-header">
         <h1>Employees</h1>
         <ol class="breadcrumb">
-            <li><a href="{{ route('home') }}"><i class="fa fa-dashboard ml-3"></i> Home</a></li>
+            <li><a href="{{ route('home') }}"><i class="fa fa-dashboard"></i> Home</a></li>
             <li class="active ml-3">Employees</li>
         </ol>
     </section>
@@ -17,11 +17,11 @@
         <div container-fluid>
             <div class="row">
                 <div class="col-md-12">
-                    <div class="card custom-card">
-                        <div class="card-header bg-primary text-white">
+                    <div class="card custom-card ">
+                        <div class="card-header bg-primary text-white bg-gray">
                             <h3 class="box-title">List of Employees</h3>
                             <div class="box-tools">
-                                <a href="{{ route('employees.create') }}" class="btn btn-primary btn-sm border">Add Employee</a>
+                                <a href="{{ route('employees.create') }}" class="btn btn-primary btn-sm border bg-white">Add Employee</a>
                             </div>
                         </div>
                         <!-- /.box-header -->

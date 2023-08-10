@@ -31,3 +31,7 @@
     color: #474747;
     text-decoration: none;
 }
+.nav-sidebar .nav-item>.nav-link {
+    position: relative;
+    color: white;
+}

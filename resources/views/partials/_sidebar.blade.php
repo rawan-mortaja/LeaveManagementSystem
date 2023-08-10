@@ -1,14 +1,14 @@
-<aside class="main-sidebar bg-indigo-500 elevation-4 ">
+<aside class="main-sidebar bg-indigo-500  bg-gray elevation-4 ">
     <!-- Brand Logo -->
     <a href="{{ route('home') }}" class="brand-link icon-open">
         <span class="brand-text font-weight-bold ml-3">Leave Management</span>
     </a>
 
     <!-- Sidebar -->
-    <div class="sidebar">
+    <div class="sidebar ">
         <!-- Sidebar Menu -->
         <nav class="mt-2">
-            <ul class="nav nav-pills nav-sidebar flex-column" data-widget="treeview" role="menu" data-accordion="false">
+            <ul class="nav nav-pills nav-sidebar flex-column " data-widget="treeview" role="menu" data-accordion="false">
                 <!-- Dashboard Link -->
                 <li class="nav-item">
                     <a href="{{ route('home') }}" class="nav-link">
@@ -35,7 +35,7 @@
 
                 <!-- Leave Requests Link -->
                 <li class="nav-item">
-                    <a href="{{ route('leave-requests.index') }}" class="nav-link">
+                    <a href="{{ route('leave-requests.index') }}" class="nav-link ">
                         <i class="nav-icon fas fa-file-alt"></i>
                         <p>Leave Requests</p>
                     </a>

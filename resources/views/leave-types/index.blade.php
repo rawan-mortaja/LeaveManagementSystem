@@ -18,10 +18,10 @@
         <div class="row">
             <div class="col-md-12">
                 <div class="card custom-card">
-                    <div class="card-header bg-primary text-white">
+                    <div class="card-header bg-primary text-white bg-gray">
                         <h3 class="box-title">List of Leave Types</h3>
                         <div class="box-tools">
-                            <a href="{{ route('leave-types.create') }}" class="btn btn-primary btn-sm border">Add Leave Type</a>
+                            <a href="{{ route('leave-types.create') }}" class="btn btn-primary btn-sm border bg-white">Add Leave Type</a>
                         </div>
                     </div>
                     <!-- /.box-header -->
