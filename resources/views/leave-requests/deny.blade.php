@@ -5,10 +5,10 @@
 @section('content')
     <h2>Deny Leave Request</h2>
 
-    <form method="POST" action="{{ route('leave-requests.deny', $leaveRequest) }}">
+    <form method="POST" action="{{ route('leave-requests.deny-submit', $leaveRequest) }}">
         @csrf
-        @method('PUT')
-        <label for="reason">Reason:</label>
+        @method('put')
+        <label for="reason">Denial Reason:</label>
         <textarea name="reason" id="reason" rows="4" required></textarea>
 
         <button type="submit">Deny</button>

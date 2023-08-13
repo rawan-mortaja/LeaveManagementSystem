@@ -100,6 +100,7 @@ class LeaveRequestController extends Controller
         $leaveRequest->status = 'denied';
         $leaveRequest->reason = $validatedData['reason'];
         $leaveRequest->save();
+        // $leaveRequest->update($request->all());
 
         return redirect()->route('leave-requests.index')
             ->with('success', 'Leave request denied.');
