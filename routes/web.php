@@ -38,6 +38,11 @@ Route::middleware(['auth'])->group(function () {
     Route::resource('leave-types', LeaveTypeController::class);
     Route::resource('employees', EmployeeController::class);
     Route::resource('leave-requests', LeaveRequestController::class);
+    Route::get('leave-requests/{leaveRequest}/approve', [LeaveRequestController::class, 'approve'])
+        ->name('leave-requests.approve');
+    Route::get('leave-requests/{leaveRequest}/deny', [LeaveRequestController::class, 'deny'])
+        ->name('leave-requests.deny');
+    // Route::get('employees/dashboard', 'EmployeeController@dashboard')->name('employee.dashboard');
 });
 
 require __DIR__ . '/auth.php';
