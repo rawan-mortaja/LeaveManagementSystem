@@ -81,28 +81,23 @@ class LeaveRequestController extends Controller
 
     public function approve(LeaveRequest $leaveRequest)
     {
-        // Implement logic to approve the leave request
         $leaveRequest->status = 'approved';
         $leaveRequest->save();
 
-        return redirect()->route('leave-requests.index')
-            ->with('success', 'Leave request approved.');
+        return view('leave-requests.approve', compact('leaveRequest'))
+            ->with('success', 'Leave request denied.');
     }
-
     public function deny(Request $request, LeaveRequest $leaveRequest)
     {
-        // Validate the request
-        $validatedData = $request->validate([
-            'reason' => 'required|string',
-        ]);
+        // $validatedData = $request->validate([
+        //     'reason' => 'required|string',
+        // ]);
 
-        // Implement logic to deny the leave request
         $leaveRequest->status = 'denied';
-        $leaveRequest->reason = $validatedData['reason'];
+        $leaveRequest->reason = $request->reason;
         $leaveRequest->save();
-        // $leaveRequest->update($request->all());
 
-        return redirect()->route('leave-requests.index')
+        return view('leave-requests.deny', compact('leaveRequest'))
             ->with('success', 'Leave request denied.');
     }
 }

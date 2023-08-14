@@ -21,7 +21,8 @@
                         <div class="card-header bg-primary text-white bg-gray">
                             <h3 class="box-title">List of Leave Requests</h3>
                             <div class="box-tools">
-                                <a href="{{ route('leave-requests.create') }}" class="btn btn-primary btn-sm border bg-white">Add Leave
+                                <a href="{{ route('leave-requests.create') }}"
+                                    class="btn btn-primary btn-sm border bg-white">Add Leave
                                     Request</a>
                             </div>
                         </div>
@@ -45,22 +46,13 @@
                                             <td>{{ $leaveRequest->leaveType->name }}</td>
                                             <td>{{ $leaveRequest->status }}</td>
                                             <td>
-                                                {{-- <a href="{{ route('leave-requests.show', $leaveRequest->id) }}"
-                                                    class="btn btn-info btn-xs">View</a>
-                                                <a href="{{ route('leave-requests.edit', $leaveRequest->id) }}"
-                                                    class="btn btn-warning btn-xs">Edit</a>
-                                                <form action="{{ route('leave-requests.destroy', $leaveRequest->id) }}"
-                                                    method="POST" style="display: inline-block;">
-                                                    @csrf
-                                                    @method('DELETE')
-                                                    <button type="submit" class="btn btn-danger btn-xs">Delete</button>
-                                                </form> --}}
-                                                <a href="{{ route('leave-requests.show', $leaveRequest) }}">View</a>
                                                 @if ($leaveRequest->status === 'pending')
-                                         
-                                                    <a href="{{ route('leave-requests.approve', $leaveRequest) }}">Approve</a>
-                                                    <a href="{{ route('leave-requests.deny', $leaveRequest) }}">Deny</a>
+                                                    <a class="btn btn-primary"
+                                                        href="{{ route('leave-requests.approve', $leaveRequest) }}">Approve</a>
+                                                    <a class="btn btn-danger"
+                                                        href="{{ route('leave-requests.deny', $leaveRequest) }}">Deny</a>
                                                 @endif
+                                                <a href="{{ route('leave-requests.show', $leaveRequest) }}">View</a>
                                             </td>
                                         </tr>
                                     @endforeach
