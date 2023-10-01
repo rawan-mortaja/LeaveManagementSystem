@@ -85,7 +85,7 @@ class LeaveRequestController extends Controller
         $leaveRequest->save();
 
         return view('leave-requests.approve', compact('leaveRequest'))
-            ->with('success', 'Leave request denied.');
+            ->with('success', 'Leave request approved.');
     }
     public function deny(Request $request, LeaveRequest $leaveRequest)
     {
@@ -98,6 +98,6 @@ class LeaveRequestController extends Controller
         $leaveRequest->save();
 
         return view('leave-requests.deny', compact('leaveRequest'))
-            ->with('success', 'Leave request denied.');
+            ->with('error', 'Leave request denied.');
     }
 }
